@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=ADC4_UART_Transmitter.c ADC4_UART_Reciever.c
+SOURCEFILES_QUOTED_IF_SPACED=ADC4_UART_Transmitter.c ADC4_UART_Transmitter_Clock.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/ADC4_UART_Transmitter.o ${OBJECTDIR}/ADC4_UART_Reciever.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/ADC4_UART_Transmitter.o.d ${OBJECTDIR}/ADC4_UART_Reciever.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/ADC4_UART_Transmitter.o ${OBJECTDIR}/ADC4_UART_Transmitter_Clock.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/ADC4_UART_Transmitter.o.d ${OBJECTDIR}/ADC4_UART_Transmitter_Clock.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/ADC4_UART_Transmitter.o ${OBJECTDIR}/ADC4_UART_Reciever.o
+OBJECTFILES=${OBJECTDIR}/ADC4_UART_Transmitter.o ${OBJECTDIR}/ADC4_UART_Transmitter_Clock.o
 
 # Source Files
-SOURCEFILES=ADC4_UART_Transmitter.c ADC4_UART_Reciever.c
+SOURCEFILES=ADC4_UART_Transmitter.c ADC4_UART_Transmitter_Clock.c
 
 
 CFLAGS=
@@ -99,11 +99,11 @@ ${OBJECTDIR}/ADC4_UART_Transmitter.o: ADC4_UART_Transmitter.c  nbproject/Makefil
 	@${RM} ${OBJECTDIR}/ADC4_UART_Transmitter.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1 -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__  -mdfp="C:/Program Files (x86)/Microchip/MPLABX/v5.15/packs/Microchip/ATmega_DFP/2.0.2"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3     -MD -MP -MF "${OBJECTDIR}/ADC4_UART_Transmitter.o.d" -MT "${OBJECTDIR}/ADC4_UART_Transmitter.o.d" -MT ${OBJECTDIR}/ADC4_UART_Transmitter.o -o ${OBJECTDIR}/ADC4_UART_Transmitter.o ADC4_UART_Transmitter.c 
 	
-${OBJECTDIR}/ADC4_UART_Reciever.o: ADC4_UART_Reciever.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/ADC4_UART_Transmitter_Clock.o: ADC4_UART_Transmitter_Clock.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/ADC4_UART_Reciever.o.d 
-	@${RM} ${OBJECTDIR}/ADC4_UART_Reciever.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1 -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__  -mdfp="C:/Program Files (x86)/Microchip/MPLABX/v5.15/packs/Microchip/ATmega_DFP/2.0.2"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3     -MD -MP -MF "${OBJECTDIR}/ADC4_UART_Reciever.o.d" -MT "${OBJECTDIR}/ADC4_UART_Reciever.o.d" -MT ${OBJECTDIR}/ADC4_UART_Reciever.o -o ${OBJECTDIR}/ADC4_UART_Reciever.o ADC4_UART_Reciever.c 
+	@${RM} ${OBJECTDIR}/ADC4_UART_Transmitter_Clock.o.d 
+	@${RM} ${OBJECTDIR}/ADC4_UART_Transmitter_Clock.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1 -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__  -mdfp="C:/Program Files (x86)/Microchip/MPLABX/v5.15/packs/Microchip/ATmega_DFP/2.0.2"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3     -MD -MP -MF "${OBJECTDIR}/ADC4_UART_Transmitter_Clock.o.d" -MT "${OBJECTDIR}/ADC4_UART_Transmitter_Clock.o.d" -MT ${OBJECTDIR}/ADC4_UART_Transmitter_Clock.o -o ${OBJECTDIR}/ADC4_UART_Transmitter_Clock.o ADC4_UART_Transmitter_Clock.c 
 	
 else
 ${OBJECTDIR}/ADC4_UART_Transmitter.o: ADC4_UART_Transmitter.c  nbproject/Makefile-${CND_CONF}.mk
@@ -112,11 +112,11 @@ ${OBJECTDIR}/ADC4_UART_Transmitter.o: ADC4_UART_Transmitter.c  nbproject/Makefil
 	@${RM} ${OBJECTDIR}/ADC4_UART_Transmitter.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__  -mdfp="C:/Program Files (x86)/Microchip/MPLABX/v5.15/packs/Microchip/ATmega_DFP/2.0.2"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3     -MD -MP -MF "${OBJECTDIR}/ADC4_UART_Transmitter.o.d" -MT "${OBJECTDIR}/ADC4_UART_Transmitter.o.d" -MT ${OBJECTDIR}/ADC4_UART_Transmitter.o -o ${OBJECTDIR}/ADC4_UART_Transmitter.o ADC4_UART_Transmitter.c 
 	
-${OBJECTDIR}/ADC4_UART_Reciever.o: ADC4_UART_Reciever.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/ADC4_UART_Transmitter_Clock.o: ADC4_UART_Transmitter_Clock.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/ADC4_UART_Reciever.o.d 
-	@${RM} ${OBJECTDIR}/ADC4_UART_Reciever.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__  -mdfp="C:/Program Files (x86)/Microchip/MPLABX/v5.15/packs/Microchip/ATmega_DFP/2.0.2"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3     -MD -MP -MF "${OBJECTDIR}/ADC4_UART_Reciever.o.d" -MT "${OBJECTDIR}/ADC4_UART_Reciever.o.d" -MT ${OBJECTDIR}/ADC4_UART_Reciever.o -o ${OBJECTDIR}/ADC4_UART_Reciever.o ADC4_UART_Reciever.c 
+	@${RM} ${OBJECTDIR}/ADC4_UART_Transmitter_Clock.o.d 
+	@${RM} ${OBJECTDIR}/ADC4_UART_Transmitter_Clock.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__  -mdfp="C:/Program Files (x86)/Microchip/MPLABX/v5.15/packs/Microchip/ATmega_DFP/2.0.2"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3     -MD -MP -MF "${OBJECTDIR}/ADC4_UART_Transmitter_Clock.o.d" -MT "${OBJECTDIR}/ADC4_UART_Transmitter_Clock.o.d" -MT ${OBJECTDIR}/ADC4_UART_Transmitter_Clock.o -o ${OBJECTDIR}/ADC4_UART_Transmitter_Clock.o ADC4_UART_Transmitter_Clock.c 
 	
 endif
 

@@ -53,7 +53,7 @@ int main(void) {
 ISR(ADC_vect){
     uint16_t ADC_val;           // The variable to store ADC value
     uint8_t temp = ADCL;        // Since ADCL has to be read first
-    ADC_val = ADCH << 2 | temp; // Then ADCH
+    ADC_val = ADCH << 8 | temp; // Then ADCH
     /* To move to next ADC input
     Note here that we have selected ADC3..0 pins for sampling */
     
@@ -72,11 +72,12 @@ ISR(ADC_vect){
     data |= (1 << 5);                   // Sending second part of the data
     data |= (ADC_val & 0b0000011111);   // Setting last 5 digits of the ADC value
     /* Second part of data ready to be sent */
-    while (!(UCSR0A & (1 << UDRE0)));  // Wait while data is ready to be sent
+    while (!(UCSR0A & (1 << UDRE0)));   // Wait while data is ready to be sent
     UDR0 = data;                        // Writing data
     /* Data Sent */
     ADC_select++;                       // Setting next ADC to be read
     ADC_select = ADC_select%4;
     ADMUX |= ADC_select;
-    ADCSRA |= 1 << ADSC;    // To start next conversion
+    //ADCSRA |= 1 << ADSC;              // To start next conversion without noise reduction
+    SMCR |= 1 << SM0;                   // To enter ADC Noise reduction mode
 }

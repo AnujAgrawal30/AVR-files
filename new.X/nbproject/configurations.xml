@@ -5,7 +5,7 @@
                    displayName="Header Files"
                    projectFiles="true">
       <itemPath>ADC4_UART_Transmitter.c</itemPath>
-      <itemPath>ADC4_UART_Reciever.c</itemPath>
+      <itemPath>ADC4_UART_Transmitter_Clock.c</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
